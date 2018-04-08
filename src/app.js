@@ -39,10 +39,10 @@ app.configure(express.rest());
 app.configure(knex);
 
 
-// Configure other middleware (see `middleware/index.js`)
-app.configure(middleware);
 // Set up our services (see `services/index.js`)
 app.configure(services);
+// Configure other middleware (see `middleware/index.js`)
+app.configure(middleware);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
