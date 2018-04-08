@@ -15,6 +15,9 @@ async function shorten() {
 
   try {
     // Try to insert the link into the db
+    const result = await axios.post(api + 'links', { link: input });
+    const id = result.data.id;
+    const resultLink = api + id;
 
     // Set the link
     $outLink.text(resultLink);
